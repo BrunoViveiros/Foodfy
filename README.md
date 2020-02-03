@@ -78,3 +78,9 @@ Fazer uma contagem de todas a receitas daquele chef, e apresentar nessa página.
 
 Acesse o arquivo `layouts/site/index.html` para ver todas especificações do layout do site.
 
+
+
+
+## :memo: Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
