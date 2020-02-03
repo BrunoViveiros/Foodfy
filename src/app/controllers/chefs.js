@@ -3,10 +3,10 @@ const Recipe = require("../models/Recipe");
 
 module.exports = {
   index(req, res) {
-    Chef.all(chefs => res.render("chefs/index", { chefs }));
+    Chef.all(chefs => res.render("admin/chefs/index", { chefs }));
   },
   create(req, res) {
-    return res.render("chefs/create");
+    return res.render("admin/chefs/create");
   },
   post(req, res) {
     const keys = Object.keys(req.body);
@@ -24,7 +24,7 @@ module.exports = {
       
       Recipe.findByChef(req.params.id, recipes => {
         console.log(recipes)
-        return res.render("chefs/show", { chef, recipes });
+        return res.render("admin/chefs/show", { chef, recipes });
       })
     });
   },
@@ -32,7 +32,7 @@ module.exports = {
     Chef.find(req.params.id, chef => {
       if (!chef) return res.send("Chef not found!");
 
-      return res.render("chefs/edit", { chef });
+      return res.render("admin/chefs/edit", { chef });
     });
   },
   put(req, res) {
